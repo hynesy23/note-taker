@@ -1,4 +1,5 @@
 const express = require("express")
+const fs = require("fs");
 const router = express.Router();
 
 const getAllNotes = ( req, res ) => {
@@ -8,6 +9,6 @@ const getAllNotes = ( req, res ) => {
     return notes;
 }
 
-app.get('/notes', getAllNotes );
+router.get('/notes', getAllNotes );
 
 module.exports = router;
